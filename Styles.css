@@ -10,16 +10,17 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #fff;
-    background-image: url('../image1.png') ;
+    background: url('/bmw1.png') no-repeat center;
+    background-size: cover;
     padding: 0 20px;
 }
 
 /* Header styling */
 header {
-   
-    color: #ffffff ;  /* Car website through out the page*/
+    background: url('/bmw2.png') no-repeat center center/cover;
+    color: #ffffff; /* Car website throughout the page */
     text-align: center;
-    padding: 60px 200 px;
+    padding: 60px 20px;
 }
 
 .header-content {
@@ -33,11 +34,11 @@ header h1 {
 
 header nav ul {
     list-style: none;
-    padding: 0px;
+    padding: 0;
 }
 
 header nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 10px;
 }
 
@@ -48,7 +49,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #5ac525; /* hover to change colorS */ 
+    color: #5ac525; /* hover to change colors */ 
 }
 
 /* Main content styling */
@@ -60,7 +61,7 @@ section {
     margin-bottom: 20px;
     padding: 20px;
     background: rgba(0, 0, 0, 0.33);
-    border-radius: 100px;
+    border-radius: 8px;
 }
 
 section h2 {
@@ -74,7 +75,7 @@ form {
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
-    background: rgba(0, 0, 0, 0.33); /*for the bg color box in contact*/
+    background: rgba(0, 0, 0, 0.33); /* for the bg color box in contact */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(12, 106, 48, 0.415);
@@ -122,4 +123,93 @@ footer {
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 10px;
+}
+
+/* Media Queries */
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+    header {
+        padding: 40px 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px 0;
+    }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 992px) {
+    header {
+        padding: 50px 20px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    header nav ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    form {
+        width: 80%;
+        padding: 20px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    main {
+        padding: 15px 0;
+    }
+}
+
+/* Laptops and Desktops */
+@media (min-width: 993px) {
+    header {
+        padding: 60px 200px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    header nav ul li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+
+    form {
+        width: 60%;
+        padding: 20px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    main {
+        padding: 20px 0;
+    }
 }
